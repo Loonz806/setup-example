@@ -1,9 +1,13 @@
-import { render } from "@testing-library/react";
-import "@testing-library/jest-dom";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import App from "../components/App";
 
-test("show the title of the application", () => {
-  const { getByText } = render(<App />);
-  expect(getByText("Hello Application Alpha")).toBeInTheDocument();
+describe("App Component", () => {
+  test("show the title of the application", () => {
+    const { debug } = render(<App />);
+    expect(
+      screen.getByRole("heading", { name: /hello application alpha/i })
+    ).toBeInTheDocument();
+    debug();
+  });
 });
