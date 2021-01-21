@@ -5,7 +5,10 @@ Showing some setup that is needed for adding jest, testing-library, some eslint 
 ### inspired by Ken C. Dodds [Javascript Testing](https://testingjavascript.com/)
 
 _Utilities to aid in enforcement_
-[Lint-Staged](https://www.npmjs.com/package/lint-staged) && [Husky](https://www.npmjs.com/package/husky) and of course CI as a last effort
+
+- [Lint-Staged](https://www.npmjs.com/package/lint-staged)
+- [Husky](https://www.npmjs.com/package/husky)
+- [Github Actions](https://docs.github.com/en/actions)
 
 #### [Eslint](https://eslint.org/) ( Static Code Analysis )
 
