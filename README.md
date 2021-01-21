@@ -9,6 +9,7 @@ _Utilities to aid in enforcement_
 - [Lint-Staged](https://www.npmjs.com/package/lint-staged)
 - [Husky](https://www.npmjs.com/package/husky)
 - [Github Actions](https://docs.github.com/en/actions)
+- [Editor Config](https://editorconfig.org/)
 
 #### [Eslint](https://eslint.org/) ( Static Code Analysis )
 
