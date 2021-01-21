@@ -2,7 +2,7 @@ import React from "react";
 import Counter from "../components/Counter";
 
 const App = () => {
-  const testMessage = "Hello Application Alpha";
+  const testMessage = "Welcome to Setup Example";
   return (
     <div>
       <h1>{testMessage}</h1>

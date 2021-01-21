@@ -6,7 +6,7 @@ describe("App Component", () => {
   test("show the title of the application", () => {
     const { debug } = render(<App />);
     expect(
-      screen.getByRole("heading", { name: /hello application alpha/i })
+      screen.getByRole("heading", { name: /Welcome to Setup Example/i })
     ).toBeInTheDocument();
     debug();
   });
