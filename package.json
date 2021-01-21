@@ -9,6 +9,7 @@
     "clean": "rm -rf dist",
     "commit": "npx git-cz",
     "coverage": "jest --config jest.config.js",
+    "format": "npm run pretty -- --write",
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore --ext .js --ext .jsx .",
     "pretty": "prettier --ignore-path .gitignore \"**/*.+(js|json|md)\"",
