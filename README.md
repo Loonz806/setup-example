@@ -1,3 +1,10 @@
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+![Github Actions CI](https://github.com/Loonz806/setup-example/workflows/Github%20Actions%20CI/badge.svg)
+[![codecov](https://codecov.io/gh/Loonz806/setup-example/branch/master/graph/badge.svg?token=Z6SR75P1WT)](https://codecov.io/gh/Loonz806/setup-example)
+[![Known Vulnerabilities](https://snyk.io/test/github/Loonz806/setup-example/badge.svg)](https://snyk.io/test/github/Loonz806/setup-example)
+
 # Setup Example
 
 To install
