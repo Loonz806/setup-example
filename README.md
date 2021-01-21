@@ -1,5 +1,9 @@
 # Setup Example
 
+To install
+
+`npm install`
+
 Showing some setup that is needed for adding jest, testing-library, some eslint configs and also some pre/push tasks using husky/lint-staged
 
 ### inspired by Ken C. Dodds [Javascript Testing](https://testingjavascript.com/)
@@ -14,6 +18,7 @@ _Utilities to aid in enforcement_
 #### [Eslint](https://eslint.org/) ( Static Code Analysis )
 
 _having good linting practices in a greenfield project is always a good way to establish consistent coding patterns and fixing errors_
+
 Eslint Command
 
 `npm run lint`
@@ -24,6 +29,7 @@ or automatically if a husky git hook is enabled via `.huskyrc` file, if linting 
 #### [Prettier](https://prettier.io/) ( Opinionated code formatter )
 
 _having unformatted code automatically become formatted by respecting linting rules first and then prettier default settings_
+
 Prettier Command
 
 `npm run pretty`
@@ -34,6 +40,7 @@ or automatically if a husky git hook is enabled via `.huskyrc` file, if linting 
 #### [Jest](https://jestjs.io/)/[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) ( Unit testing Functions and also DOM Assertion )
 
 _addresses unit testing of any application running React by using two libraries that complement each other Jest and React Testing Library_
+
 Test Command
 
 `npm run test`
@@ -48,6 +55,10 @@ _addresses meaningless commit history that often doesn't speak to what ticket, c
 Runs automatically on commit-msg hook, strongly opinionated but not enforced.
 
 #### [CodeCov](https://about.codecov.io/) ( Line coverage of unit tests and files )
+
+Codecov Command
+
+`npm run coverage`
 
 _reports line coverage for repository by using a reporter that is pushed to an reporting suite and badged locally_
 
