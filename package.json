@@ -8,6 +8,7 @@
     "build": "webpack --mode production",
     "clean": "rm -rf dist",
     "commit": "npx git-cz",
+    "coverage": "jest --config jest.config.js",
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore --ext .js --ext .jsx .",
     "pretty": "prettier --ignore-path .gitignore \"**/*.+(js|json|md)\"",
