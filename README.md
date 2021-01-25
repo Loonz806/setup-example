@@ -17,14 +17,15 @@ Showing some setup that is needed for adding jest, testing-library, some eslint 
 
 _Utilities to aid in enforcement_
 
-- [Lint-Staged](https://www.npmjs.com/package/lint-staged)
-- [Husky](https://www.npmjs.com/package/husky)
-- [Github Actions](https://docs.github.com/en/actions)
-- [Editor Config](https://editorconfig.org/)
+- [Lint-Staged](https://www.npmjs.com/package/lint-staged) ( catch unlinted files before they get pushed into expensive build times in CI )
+- [Husky](https://www.npmjs.com/package/husky) ( if you use git, this is very handy to have actions trigger )
+- [Github Actions](https://docs.github.com/en/actions) ( Githubs CI tool, tasker )
+- [Editor Config](https://editorconfig.org/) ( Not all IDE's are configured the same )
 
 #### [Eslint](https://eslint.org/) ( Static Code Analysis )
 
 _having good linting practices in a greenfield project is always a good way to establish consistent coding patterns and fixing errors_
+_in this example standard is being used, less config the better_
 
 Eslint Command
 
@@ -36,6 +37,7 @@ or automatically if a husky git hook is enabled via `.huskyrc` file, if linting 
 #### [Prettier](https://prettier.io/) ( Opinionated code formatter )
 
 _having unformatted code automatically become formatted by respecting linting rules first and then prettier default settings_
+_you can see the configuration by reviewing the .eslintrc file_
 
 Prettier Command
 
