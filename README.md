@@ -43,7 +43,7 @@ Prettier Command
 
 `npm run pretty`
 
-or automatically if a husky git hook is enabled via `.huskyrc` file, if linting is bypassed with `--no-verify` it is caught with
+or automatically if a husky git hook is enabled via `.huskyrc` file, if formatting is bypassed with `--no-verify` it is caught with
 `.lintstagedrc` this also is helpful with folks who don't use IDE's and perhaps use text-editors or other tooling. It is also in the CI/CD checks in Github Actions upstream
 
 #### [Jest](https://jestjs.io/)/[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) ( Unit testing Functions and also DOM Assertion )
@@ -54,14 +54,13 @@ Test Command
 
 `npm run test`
 
-or automatically if a husky git hook is enabled via `.huskyrc` file, if linting is bypassed with `--no-verify` it is caught with
-`.lintstagedrc` this also is helpful with folks who don't use IDE's and perhaps use text-editors or other tooling. It is also in the CI/CD checks in Github Actions upstream
+or automatically if a husky git hook is enabled via `.huskyrc` file, if testing is bypassed with `--no-verify` it is caught in the CI/CD checks in Github Actions upstream
 
 #### [Commitlint](https://commitlint.js.org/#/) ( Commit messages that connect to JIRA tickets )
 
 _addresses meaningless commit history that often doesn't speak to what ticket, concept or idea nor attached to JIRA automatically on code changes_
 
-Runs automatically on commit-msg hook, strongly opinionated but not enforced.
+Runs automatically on commit-msg hook, strongly opinionated but not enforced. Configuration file is `commitlint.config.js` and is envoked via the `.huskyrc` file
 
 #### [CodeCov](https://about.codecov.io/) ( Line coverage of unit tests and files )
 
@@ -72,3 +71,9 @@ Codecov Command
 _reports line coverage for repository by using a reporter that is pushed to an reporting suite and badged locally_
 
 Runs on successful build chain in Github Actions
+
+#### [Github Actions](https://docs.github.com/en/actions) ( Some github hosted CI actions that can be run branch dependant )
+
+_runs linting, testing and building and deployment to github pages on primary branch_
+
+Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
