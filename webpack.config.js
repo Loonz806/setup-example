@@ -5,6 +5,11 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000,
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[hash].js",

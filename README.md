@@ -77,3 +77,10 @@ Runs on successful build chain in Github Actions
 _runs linting, testing and building and deployment to github pages on primary branch_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
+
+#### [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) ( Running against a local build before deploying but can be modified )
+
+_runs e2e testing against browsers such as Chrome and Firefox to do some actual dom assertions_
+
+Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
+Runs as a dependency in CI as well for deployment but can be modified via the Github Action

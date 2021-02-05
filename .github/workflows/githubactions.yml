@@ -54,12 +54,26 @@ jobs:
       - run: ./node_modules/.bin/codecov
       - run: |
           cat codecov.yml | curl --data-binary @- https://codecov.io/validate
+  e2e:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run e2e:test
   deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [14.x]
-    needs: [lint, test]
+    needs: [lint, test, e2e]
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
