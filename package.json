@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --open --mode development",
+    "start": "npx webpack serve --env NODE_ENV=local --env production --progress",
     "build": "webpack --mode production",
     "clean": "rm -rf dist",
     "commit": "npx git-cz",
@@ -17,7 +18,7 @@
     "precommit": "npm-run-all --parallel lint pretty",
     "validate": "npm-run-all --parallel check-format lint",
     "cy:run": "npx cypress run",
-    "e2e:test": "start-server-and-test dev http://localhost:8080 cy:run"
+    "e2e:test": "start-server-and-test start http://localhost:9000 cy:run"
   },
   "author": "Lenny Peters <@loonz806>",
   "license": "MIT",
