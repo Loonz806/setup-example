@@ -66,7 +66,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
       - run: npm run e2e:test
   deploy:
     runs-on: ubuntu-latest
