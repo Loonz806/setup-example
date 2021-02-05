@@ -10,6 +10,7 @@ module.exports = {
     "standard",
     "plugin:prettier/recommended",
     "plugin:cypress/recommended",
+    "plugin:security/recommended",
   ],
   parserOptions: {
     ecmaFeatures: {
