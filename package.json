@@ -18,7 +18,7 @@
     "precommit": "npm-run-all --parallel lint pretty",
     "validate": "npm-run-all --parallel check-format lint",
     "cy:run": "npx cypress run",
-    "e2e:test": "start-server-and-test start http://localhost:9000 cy:run"
+    "e2e:test": "start-server-and-test start http://localhost:9000 percy exec -- cy:run"
   },
   "author": "Lenny Peters <@loonz806>",
   "license": "MIT",
