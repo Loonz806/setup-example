@@ -70,7 +70,7 @@ jobs:
           $PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
       - run: npm install
       - run: |
-          "$PERCY_TOKEN" npm run e2e:test
+          $PERCY_TOKEN npm run e2e:test
   deploy:
     runs-on: ubuntu-latest
     strategy:
