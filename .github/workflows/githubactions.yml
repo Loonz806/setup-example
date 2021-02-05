@@ -67,10 +67,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
         env:
-          $PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
       - run: npm install
-      - run: |
-          $PERCY_TOKEN npm run e2e:test
+      - run: npm run e2e:test
   deploy:
     runs-on: ubuntu-latest
     strategy:
