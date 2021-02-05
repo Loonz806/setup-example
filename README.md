@@ -3,6 +3,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ![Github Actions CI](https://github.com/Loonz806/setup-example/workflows/Github%20Actions%20CI/badge.svg)
 [![codecov](https://codecov.io/gh/Loonz806/setup-example/branch/master/graph/badge.svg?token=Z6SR75P1WT)](https://codecov.io/gh/Loonz806/setup-example)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/47e38cc6/Visual-Testing-Example)
 [![Known Vulnerabilities](https://snyk.io/test/github/Loonz806/setup-example/badge.svg)](https://snyk.io/test/github/Loonz806/setup-example)
 
 # Setup Example
@@ -81,6 +82,13 @@ Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline 
 #### [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) ( Running against a local build before deploying but can be modified )
 
 _runs e2e testing against browsers such as Chrome and Firefox to do some actual dom assertions_
+
+Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
+Runs as a dependency in CI as well for deployment but can be modified via the Github Action
+
+#### [Percy](https://percy.io) ( Running visual regression testing in the e2e test suite in which needs approval from QA to be passing )
+
+_snap shots at/in the cypress e2e testing creates a screen comparison tool for regression for visuals that is automated and can scale_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
