@@ -57,6 +57,8 @@ Test Command
 
 or automatically if a husky git hook is enabled via `.huskyrc` file, if testing is bypassed with `--no-verify` it is caught in the CI/CD checks in Github Actions upstream
 
+**Useful Chrome Extension** - https://chrome.google.com/webstore/detail/testing-library-which-que/olmmagdolfehlpjmbkmondggbebeimoh?hl=en-US
+
 #### [Commitlint](https://commitlint.js.org/#/) ( Commit messages that connect to JIRA tickets )
 
 _addresses meaningless commit history that often doesn't speak to what ticket, concept or idea nor attached to JIRA automatically on code changes_
@@ -85,6 +87,9 @@ _runs e2e testing against browsers such as Chrome and Firefox to do some actual 
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
+
+**Userful Chrome Extensions**
+(Cypress Recorder Chrome Extension)[https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab?hl=en-US]
 
 #### [Percy](https://percy.io) ( Running visual regression testing in the e2e test suite in which needs approval from QA to be passing )
 
