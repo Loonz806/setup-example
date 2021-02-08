@@ -26,7 +26,7 @@ _Utilities to aid in enforcement_
 #### [Eslint](https://eslint.org/) ( Static Code Analysis )
 
 _having good linting practices in a greenfield project is always a good way to establish consistent coding patterns and fixing errors_
-_in this example standard is being used, less config the better_
+_in this example StandardJS is being used, less config the better_
 
 Eslint Command
 
