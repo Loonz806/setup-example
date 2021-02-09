@@ -1,30 +1,33 @@
-import React, { Component } from "react";
+/* eslint-disable react/prop-types */
+import { Component } from "react";
 
-class ErrorBoundry extends Component {
-  constructor() {
-    super();
-    this.state = {
-      errorMessage: "",
-    };
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+    const { fallback } = props;
+    if (fallback === undefined) {
+      console.warn("ErrorBoundary fallback not set!");
+    }
   }
 
   static getDerivedStateFromError(error) {
-    return { errorMessage: error.toString() };
+    return { hasError: true, error };
   }
 
-  componentDidCatch(error, info) {
-    this.logErrorToServices = console.log;
-    this.logErrorToServices(error.toString(), info.componentStack);
+  componentDidCatch(error) {
+    const message = `Unable to render: ${error}`;
+    console.error(message);
   }
 
-  // A fake logging service 😬
   render() {
-    if (this.state.errorMessage) {
-      return <p>{this.state.errorMessage}</p>;
+    const { hasError } = this.state;
+    const { children = null, fallback = null } = this.props;
+    if (hasError) {
+      return fallback;
     }
-    // eslint-disable-next-line react/prop-types
-    return this.props.children;
+    return children;
   }
 }
 
-export default ErrorBoundry;
+export default ErrorBoundary;
