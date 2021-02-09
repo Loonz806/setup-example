@@ -97,3 +97,10 @@ _snap shots at/in the cypress e2e testing creates a screen comparison tool for r
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
+
+#### [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) ( Running performance testing in the CI build via Github Actions )
+
+_regresses individual builds against the preset for non:pwa application standards and also is configurable_
+
+Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
+Runs as a dependency in CI as well for deployment but can be modified via the Github Action
