@@ -3,3 +3,9 @@ $primaryColor: #212121;
 body {
   color: $primaryColor;
 }
+
+button {
+  height: 32px;
+  width: 32px;
+  margin-right: 16px;
+}
