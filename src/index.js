@@ -1,8 +1,9 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
+import ErrorBoundry from "./components/ErrorBoundry";
 import "./styles/global.scss";
 import analytics from "./analytics";
+const App = lazy(() => import("./components/App"));
 
 /* Attach listeners once */
 // Obviously this would need to be done for a routing system but the concept works
@@ -16,4 +17,11 @@ analytics.on("pageStart", function lol() {
   console.log("Page Start");
 });
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(
+  <ErrorBoundry>
+    <Suspense fallback={<div>Loading...</div>}>
+      <App />
+    </Suspense>
+  </ErrorBoundry>,
+  document.querySelector("#root")
+);
