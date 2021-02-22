@@ -42,12 +42,12 @@ describe("<ErrorBoundry/>", () => {
       return <div>Hello World</div>;
     };
 
-    const { debug } = render(
+    const { unmount } = render(
       <ErrorBoundry>
         <Greeting />
       </ErrorBoundry>
     );
-    debug();
     expect(console.warn).toHaveBeenCalled();
+    unmount();
   });
 });
