@@ -34,4 +34,20 @@ describe("<ErrorBoundry/>", () => {
     expect(console.error).toHaveBeenCalled();
     unmount();
   });
+
+  test("throws warning if no fallback is given", () => {
+    console.warn = jest.fn();
+    jest.spyOn(console, "warn");
+    const Greeting = () => {
+      return <div>Hello World</div>;
+    };
+
+    const { debug } = render(
+      <ErrorBoundry>
+        <Greeting />
+      </ErrorBoundry>
+    );
+    debug();
+    expect(console.warn).toHaveBeenCalled();
+  });
 });
