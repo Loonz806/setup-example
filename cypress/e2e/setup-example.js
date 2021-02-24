@@ -1,7 +1,8 @@
 describe("the setup-example page", () => {
+  // Now using Cypress/Testing-Library :)
   beforeEach(() => {
     // Load our app before starting each test case
-    cy.visit("http://localhost:9000");
+    cy.visit("/");
   });
 
   it("loads the application", () => {
@@ -10,16 +11,16 @@ describe("the setup-example page", () => {
   });
 
   it("should add to the count", () => {
-    cy.get("p").should("have.text", "0");
-    cy.get("button:nth-child(2)").click();
-    cy.get("p").should("have.text", "1");
+    cy.findByText(/^0$/).should("have.text", "0");
+    cy.findByText(/^\+$/).click();
+    cy.findByText(/^1$/).should("have.text", "1");
     cy.percySnapshot("Addition assertion");
   });
 
   it("should subtract from the count", () => {
-    cy.get("p").should("have.text", "0");
-    cy.get("button:nth-child(3)").click();
-    cy.get("p").should("have.text", "-1");
+    cy.findByText(/^0$/).should("have.text", "0");
+    cy.findByText(/^-$/).click();
+    cy.findByText(/^-1$/).should("have.text", "-1");
     cy.percySnapshot("subtraction assertion");
   });
 });
