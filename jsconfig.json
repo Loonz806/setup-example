@@ -1,0 +1,8 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es2019"
+  },
+  "exclude": ["node_modules"]
+}
