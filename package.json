@@ -28,7 +28,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "sass": "^1.32.6"
+    "sass": "^1.32.7"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
