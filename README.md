@@ -104,3 +104,7 @@ _regresses individual builds against the preset for non:pwa application standard
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
+
+#### [Storybook](https://storybook.js.org/)
+
+_Uses a helpful pattern/library component repo that organizes code into reusable components and utilities that can be tested, verified seperately_
