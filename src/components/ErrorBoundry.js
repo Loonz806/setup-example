@@ -4,7 +4,7 @@ import { Component } from "react";
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false };
     const { fallback } = props;
     if (fallback === undefined) {
       console.warn("ErrorBoundary fallback not set!");
@@ -12,11 +12,14 @@ class ErrorBoundary extends Component {
   }
 
   static getDerivedStateFromError(error) {
-    return { hasError: true, error };
+    // Update state so the next render will show the fallback UI.
+    if (error) {
+      return { hasError: true };
+    }
   }
 
-  componentDidCatch(error) {
-    const message = `Unable to render: ${error}`;
+  componentDidCatch(error, errorInfo) {
+    const message = `Unable to render: ${error} ${errorInfo}`;
     console.error(message);
   }
 
