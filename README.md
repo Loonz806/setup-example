@@ -107,6 +107,17 @@ _regresses individual builds against the preset for non:pwa application standard
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
 
+#### [axe-core](https://github.com/dequelabs/axe-core) + [cypress-axe](https://www.npmjs.com/package/cypress-axe)
+
+_regress individual builds against the a11y recommended axe-core library for introductions of malformed html, mislabeled aria-roles_
+
+Code is folded into the cypress e2e testing suite.
+Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
+Runs as a dependency in CI as well for deployment but can be modified via the Github Action
+
+**Useful Chrome Extensions**
+(axe DevTools - Web Accessibility Testing)[https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US]
+
 #### [Storybook](https://storybook.js.org/)
 
 _Uses a helpful pattern/library component repo that organizes code into reusable components and utilities that can be tested, verified seperately_
