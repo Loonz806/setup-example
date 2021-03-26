@@ -5,9 +5,13 @@ const App = () => {
   const testMessage = "Welcome to Setup Example";
   return (
     <div>
-      <h1>{testMessage}</h1>
+      <header>
+        <h1>{testMessage}</h1>
+      </header>
       <Suspense fallback={<div>Loading...</div>}>
-        <Counter />
+        <main id="content">
+          <Counter />
+        </main>
       </Suspense>
     </div>
   );
