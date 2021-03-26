@@ -54,7 +54,7 @@ jobs:
       - run: ./node_modules/.bin/codecov
       - run: |
           cat codecov.yml | curl --data-binary @- https://codecov.io/validate
-  e2e/visual/a11y:
+  e2e_visual_a11y:
     runs-on: ubuntu-latest
     strategy:
       matrix:
