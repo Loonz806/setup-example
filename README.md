@@ -5,6 +5,7 @@
 [![codecov](https://codecov.io/gh/Loonz806/setup-example/branch/master/graph/badge.svg?token=Z6SR75P1WT)](https://codecov.io/gh/Loonz806/setup-example)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/47e38cc6/Visual-Testing-Example)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Loonz806/setup-example.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Loonz806/setup-example/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Loonz806/setup-example.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Loonz806/setup-example/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/Loonz806/setup-example/badge.svg)](https://snyk.io/test/github/Loonz806/setup-example)
 
 # Setup Example
