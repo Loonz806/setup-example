@@ -2,7 +2,6 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ![Github Actions CI](https://github.com/Loonz806/setup-example/workflows/Github%20Actions%20CI/badge.svg)
-[![codecov](https://codecov.io/gh/Loonz806/setup-example/branch/master/graph/badge.svg?token=Z6SR75P1WT)](https://codecov.io/gh/Loonz806/setup-example)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/47e38cc6/Visual-Testing-Example)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Loonz806/setup-example.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Loonz806/setup-example/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Loonz806/setup-example.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Loonz806/setup-example/context:javascript)
@@ -66,16 +65,6 @@ or automatically if a husky git hook is enabled via `.huskyrc` file, if testing 
 _addresses meaningless commit history that often doesn't speak to what ticket, concept or idea nor attached to JIRA automatically on code changes_
 
 Runs automatically on commit-msg hook, strongly opinionated but not enforced. Configuration file is `commitlint.config.js` and is envoked via the `.huskyrc` file
-
-#### [CodeCov](https://about.codecov.io/) ( Line coverage of unit tests and files )
-
-Codecov Command
-
-`npm run coverage`
-
-_reports line coverage for repository by using a reporter that is pushed to an reporting suite and badged locally_
-
-Runs on successful build chain in Github Actions
 
 #### [Github Actions](https://docs.github.com/en/actions) ( Some github hosted CI actions that can be run branch dependant )
 
