@@ -48,7 +48,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install --save-dev codecov
       - run: npm run test
       - run: npm run coverage
   e2e_visual_a11y:
