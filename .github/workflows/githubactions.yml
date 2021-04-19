@@ -49,53 +49,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm run test
-      - name: Print the Total Coverage
-        id: coverage-percent
-        shell: bash
-        run: |
-          value=`sed -n 47p coverage/lcov-report/index.html | awk -F '>' '{print $2}' | awk -F '%' '{print $1}'`
-          echo "::set-output name=coverage::$value"
-          echo $value
-      - name: Add Coverage Label
-        uses: actions/github-script@v2
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            let newLabel = 'COV: ${{steps.coverage-percent.outputs.coverage}}'
-            const labels = await github.issues.listLabelsOnIssue({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo
-            })
-            console.log(labels.data)
-            let covLabel = null
-            labels.data.forEach(label => {
-              if (label.name.match(/COV:/)) {
-                covLabel = label
-              }
-            })
-            if (covLabel && covLabel.name === newLabel) {
-              covLabel = null
-            }
-            covLabel && github.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: covLabel.name,
-            })
-            newLabel && github.issues.addLabels({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: [newLabel]
-            })
-
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v1
-        with:
-          name: code-coverage-report
-          path: coverage
+      - run: npm run coverage
   e2e_visual_a11y:
     runs-on: ubuntu-latest
     strategy:
