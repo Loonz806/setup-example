@@ -50,10 +50,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run test
-      - name: Print the Total coverage
+      - name: Print the Total Coverage
         id: coverage-percent
-      - run: npm run coverage
-      - run: |
+        shell: bash
+        run: |
           value=`sed -n 47p coverage/lcov-report/index.html | awk -F '>' '{print $2}' | awk -F '%' '{print $1}'`
           echo "::set-output name=coverage::$value"
           echo $value
