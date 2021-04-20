@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import ErrorBoundry from "../src/components/ErrorBoundry";
+import ErrorBoundary from "../src/components/ErrorBoundary";
 
 describe("<ErrorBoundry/>", () => {
   test("shows the component when there is not", () => {
@@ -10,9 +10,9 @@ describe("<ErrorBoundry/>", () => {
 
     const fallback = (error) => <span>Error: {error.message}</span>;
     const { getByText, unmount } = render(
-      <ErrorBoundry fallback={fallback}>
+      <ErrorBoundary fallback={fallback}>
         <Greeting />
-      </ErrorBoundry>
+      </ErrorBoundary>
     );
     getByText("Hello World");
     unmount();
@@ -27,9 +27,9 @@ describe("<ErrorBoundry/>", () => {
 
     const fallback = (error) => <span>Error: {error.message}</span>;
     const { unmount } = render(
-      <ErrorBoundry fallback={fallback}>
+      <ErrorBoundary fallback={fallback}>
         <Greeting />
-      </ErrorBoundry>
+      </ErrorBoundary>
     );
     expect(console.error).toHaveBeenCalled();
     unmount();
@@ -43,9 +43,9 @@ describe("<ErrorBoundry/>", () => {
     };
 
     const { unmount } = render(
-      <ErrorBoundry>
+      <ErrorBoundary>
         <Greeting />
-      </ErrorBoundry>
+      </ErrorBoundary>
     );
     expect(console.warn).toHaveBeenCalled();
     unmount();

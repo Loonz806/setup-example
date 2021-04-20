@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
-import ErrorBoundry from "./components/ErrorBoundry";
+import ErrorBoundary from "./components/ErrorBoundary";
 import "./styles/global.scss";
 import analytics from "./analytics";
 const App = lazy(() => import("./components/App"));
@@ -18,10 +18,10 @@ analytics.on("pageStart", function lol() {
 });
 
 ReactDOM.render(
-  <ErrorBoundry>
+  <ErrorBoundary>
     <Suspense fallback={<div>Loading...</div>}>
       <App />
     </Suspense>
-  </ErrorBoundry>,
+  </ErrorBoundary>,
   document.querySelector("#root")
 );

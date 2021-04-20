@@ -28,7 +28,6 @@ describe("the setup-example page", () => {
     cy.findByText(/^0$/).should("have.text", "0");
     cy.findByText(/^\+$/).click();
     cy.findByText(/^1$/).should("have.text", "1");
-    // cy.checkA11y(/^1$/);
     cy.percySnapshot("Addition assertion");
   });
 
