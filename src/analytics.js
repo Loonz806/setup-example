@@ -29,5 +29,7 @@ analytics.identify("user-id-xyz", {
 
 window.Analytics = analytics;
 
+// TODO: lets see if you catch this
+
 /* export analytics for usage through the app */
 export default analytics;
