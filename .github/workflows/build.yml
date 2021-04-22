@@ -34,10 +34,6 @@ jobs:
             -Dsonar.organization=loonz806
             -Dsonar.projectKey=Loonz806_setup-example
             -Dsonar.javascript.coverage.reportPaths=coverage/sonar-report.xml
-            -Dsonar.sources=lib/
-            -Dsonar.test.exclusions=__tests__/**,cypress/e2e
-            -Dsonar.tests=__tests__/
-            -Dsonar.verbose=true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
