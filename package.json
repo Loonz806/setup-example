@@ -73,7 +73,7 @@
     "html-webpack-plugin": "^5.0.0",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
-    "jest-sonar": "^0.2.12",
+    "jest-sonar-reporter": "^2.0.0",
     "lint-staged": "^10.4.0",
     "npm-run-all": "^4.1.5",
     "postcss-loader": "^4.2.0",
@@ -89,6 +89,7 @@
   },
   "jest": {
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "testResultsProcessor": "jest-sonar-reporter"
   }
 }
