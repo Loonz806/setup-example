@@ -28,7 +28,6 @@ jobs:
             -Dsonar.organization=loonz806
             -Dsonar.projectKey=Loonz806_setup-example
             -Dsonar.sources=src
-            -Dsonar.tests=__tests__
             -Dsonar.test.inclusions=**/*.test.js
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
             -Dsonar.testExecutionReportPaths=coverage/sonar-report.xml
