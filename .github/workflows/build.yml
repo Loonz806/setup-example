@@ -27,7 +27,11 @@ jobs:
           args: >
             -Dsonar.organization=loonz806
             -Dsonar.projectKey=Loonz806_setup-example
-            -Dssonar.javascript.lcov.reportPaths=./coverage/lcov.info
+            -Dsonar.sources=src
+            -Dsonar.tests=__tests__
+            -Dsonar.test.inclusions=**/*.test.js
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+            -Dsonar.testExecutionReportPaths=coverage/sonar-report.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
