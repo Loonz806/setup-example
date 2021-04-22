@@ -91,5 +91,8 @@
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
     "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportPath": "coverage"
   }
 }
