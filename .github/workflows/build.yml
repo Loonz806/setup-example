@@ -22,15 +22,6 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
-        with:
-          projectBaseDir: ./src
-          args: >
-            -Dsonar.organization=loonz806
-            -Dsonar.projectKey=Loonz806_setup-example
-            -Dsonar.sources=src
-            -Dsonar.test.inclusions=**/*.test.js
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-            -Dsonar.testExecutionReportPaths=coverage/test-report.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
