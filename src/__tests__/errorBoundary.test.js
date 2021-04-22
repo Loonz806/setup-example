@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import ErrorBoundary from "../src/components/ErrorBoundary";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 describe("<ErrorBoundry/>", () => {
   test("shows the component when there is not", () => {

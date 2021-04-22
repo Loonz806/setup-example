@@ -1,4 +1,4 @@
-import sum from "../src/utils/sum";
+import sum from "../utils/sum";
 
 describe("sum function", () => {
   test("should add two numbers together", () => {
