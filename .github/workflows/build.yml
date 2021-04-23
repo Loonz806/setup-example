@@ -23,14 +23,6 @@ jobs:
           fetch-depth: 0
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
-        with:
-          projectBaseDir: ./
-          args: >
-            -Dsonar.organization=loonz806
-            -Dsonar.projectKey=Loonz806_setup-example
-            -Dsonar.javascript.lcov.reportPaths=coverage/Icov.info
-            -Dsonar.sources=.
-            -Dsonar.coverage.exclusions=**/*.test.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
