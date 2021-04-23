@@ -87,12 +87,8 @@
     "webpack-cli": "^4.4.0",
     "webpack-dev-server": "^3.11.0"
   },
-  "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "testResultsProcessor": "jest-sonar-reporter"
-  },
   "jestSonar": {
-    "reportPath": "coverage"
+    "reportPath": "./coverage/",
+    "reportFile": "test-reporter.xml"
   }
 }
