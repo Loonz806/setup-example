@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import "./styles/global.scss";
-import analytics from "./analytics";
+import analytics from "./utils/analytics";
 const App = lazy(() => import("./components/App"));
 
 /* Attach listeners once */
