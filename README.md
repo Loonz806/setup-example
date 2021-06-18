@@ -69,13 +69,13 @@ Runs automatically on commit-msg hook, strongly opinionated but not enforced. Co
 
 #### [Github Actions](https://docs.github.com/en/actions) ( Some github hosted CI actions that can be run branch dependant )
 
-_runs linting, testing and building and deployment to github pages on primary branch_
+_runs linting, testing and building and deployment to github pages on primary branch and/or branches opened for pull request_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 
 #### [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) ( Running against a local build before deploying but can be modified )
 
-_runs e2e testing against browsers such as Chrome and Firefox to do some actual dom assertions_
+_runs e2e testing against browsers such as Chrome, Edge and Firefox to do some actual dom assertions covering lions share of browsers_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
@@ -85,7 +85,7 @@ Runs as a dependency in CI as well for deployment but can be modified via the Gi
 
 #### [Percy](https://percy.io) ( Running visual regression testing in the e2e test suite in which needs approval from QA to be passing )
 
-_snap shots at/in the cypress e2e testing creates a screen comparison tool for regression for visuals that is automated and can scale_
+_snap shots at/in the cypress e2e testing creates a screen comparison tool for regression for visuals that is automated and can scale against browsers such as Chrome, Edge and Firefox_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
