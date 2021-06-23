@@ -4,7 +4,7 @@
 ![Github Actions CI](https://github.com/Loonz806/setup-example/workflows/Github%20Actions%20CI/badge.svg)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/47e38cc6/Visual-Testing-Example)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Loonz806/setup-example.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Loonz806/setup-example/alerts/)
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/dashboard?id=Loonz806_setup-example)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Loonz806_setup-example&metric=alert_status)](https://sonarcloud.io/dashboard?id=Loonz806_setup-example)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Loonz806/setup-example.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Loonz806/setup-example/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/Loonz806/setup-example/badge.svg)](https://snyk.io/test/github/Loonz806/setup-example)
 
@@ -69,13 +69,13 @@ Runs automatically on commit-msg hook, strongly opinionated but not enforced. Co
 
 #### [Github Actions](https://docs.github.com/en/actions) ( Some github hosted CI actions that can be run branch dependant )
 
-_runs linting, testing and building and deployment to github pages on primary branch_
+_runs linting, testing and building and deployment to github pages on primary branch and/or branches opened for pull request_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 
 #### [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) ( Running against a local build before deploying but can be modified )
 
-_runs e2e testing against browsers such as Chrome and Firefox to do some actual dom assertions_
+_runs e2e testing against browsers such as Chrome, Edge and Firefox to do some actual dom assertions covering lions share of browsers_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
@@ -85,7 +85,7 @@ Runs as a dependency in CI as well for deployment but can be modified via the Gi
 
 #### [Percy](https://percy.io) ( Running visual regression testing in the e2e test suite in which needs approval from QA to be passing )
 
-_snap shots at/in the cypress e2e testing creates a screen comparison tool for regression for visuals that is automated and can scale_
+_snap shots at/in the cypress e2e testing creates a screen comparison tool for regression for visuals that is automated and can scale against browsers such as Chrome, Edge and Firefox_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
