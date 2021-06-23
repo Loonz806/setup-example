@@ -16,9 +16,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install --save-dev jest
-      - run: npm run gitCoverage
-      - run: |
-         sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' lcov.info
+      - run: npm run browserupdate-coverage
       - uses: actions/checkout@v2
         with:
           # Disabling shallow clone is recommended for improving relevancy of reporting

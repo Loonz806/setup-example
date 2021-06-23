@@ -10,7 +10,7 @@
     "clean": "rm -rf dist",
     "commit": "npx git-cz",
     "coverage": "jest --config jest.config.js",
-    "gitCoverage": "npx browserslist@latest --update-db && npm run coverage",
+    "browserupdate-coverage": "npx browserslist@latest --update-db && npm run coverage",
     "format": "npm run pretty -- --write",
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore --ext .js --ext .jsx .",
