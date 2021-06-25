@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install --save-dev jest
-      - run: npm run browserupdate-coverage
-      - uses: actions/checkout@v2
-        with:
-          # Disabling shallow clone is recommended for improving relevancy of reporting
           fetch-depth: 0
+      - name: Get master
+        run: git fetch origin main
+      - name: Install dependencies
+        run: npm install
+      - name: Install Jest globally
+        run: sudo npm install -g jest
+      - name: Run Tests
+        run: npm run browserupdate-coverage
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
