@@ -3,7 +3,7 @@ import React from "react";
 import ErrorBoundary from "../components/ErrorBoundary";
 
 describe("<ErrorBoundry/>", () => {
-  test("shows the component when there is not", () => {
+  test("shows the component when there is not an error", () => {
     const Greeting = () => {
       return <div>Hello World</div>;
     };
@@ -18,7 +18,7 @@ describe("<ErrorBoundry/>", () => {
     unmount();
   });
 
-  test("shows the component when there is not", () => {
+  test("Throws an error when a error happens", () => {
     console.error = jest.fn();
     jest.spyOn(console, "error");
     const Greeting = () => {
