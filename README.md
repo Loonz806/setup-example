@@ -149,3 +149,7 @@ Runs as a dependency in CI as well for deployment but can be modified via the Gi
 #### [Storybook](https://storybook.js.org/)
 
 _Uses a helpful pattern/library component repo that organizes code into reusable components and utilities that can be tested, verified seperately_
+
+```
+npm run storybook
+```
