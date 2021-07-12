@@ -12,7 +12,9 @@
 
 To install
 
-`npm install`
+```
+npm install
+```
 
 Showing some setup that is needed for adding jest, testing-library, some eslint configs and also some pre/push tasks using husky/lint-staged
 
@@ -32,7 +34,11 @@ _in this example StandardJS is being used, less config the better_
 
 Eslint Command
 
-`npm run lint`
+```
+npm run lint
+```
+
+_full config of eslint plugins/configs found in the .eslintrc_
 
 or automatically if a husky git hook is enabled via `.huskyrc` file, if linting is bypassed with `--no-verify` it is caught with
 `.lintstagedrc` this also is helpful with folks who don't use IDE's and perhaps use text-editors or other tooling. It is also in the CI/CD checks in Github Actions upstream
@@ -44,7 +50,11 @@ _you can see the configuration by reviewing the .eslintrc file_
 
 Prettier Command
 
-`npm run pretty`
+```
+npm run pretty
+```
+
+_a format command is helpful to run over entire projects as well_
 
 or automatically if a husky git hook is enabled via `.huskyrc` file, if formatting is bypassed with `--no-verify` it is caught with
 `.lintstagedrc` this also is helpful with folks who don't use IDE's and perhaps use text-editors or other tooling. It is also in the CI/CD checks in Github Actions upstream
@@ -55,7 +65,11 @@ _addresses unit testing of any application running React by using two libraries 
 
 Test Command
 
-`npm run test`
+```
+npm run test
+```
+
+_or even **npm run coverage** which outputs a report of the unit coverage_
 
 or automatically if a husky git hook is enabled via `.huskyrc` file, if testing is bypassed with `--no-verify` it is caught in the CI/CD checks in Github Actions upstream
 
@@ -67,11 +81,19 @@ _addresses meaningless commit history that often doesn't speak to what ticket, c
 
 Runs automatically on commit-msg hook, strongly opinionated but not enforced. Configuration file is `commitlint.config.js` and is envoked via the `.huskyrc` file
 
+More meaningful commit messages evoked by
+
+```
+npm run commit
+```
+
 #### [Github Actions](https://docs.github.com/en/actions) ( Some github hosted CI actions that can be run branch dependant )
 
 _runs linting, testing and building and deployment to github pages on primary branch and/or branches opened for pull request_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
+
+[Github Actions](https://github.com/Loonz806/setup-example/actions)
 
 #### [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) ( Running against a local build before deploying but can be modified )
 
@@ -79,6 +101,20 @@ _runs e2e testing against browsers such as Chrome, Edge and Firefox to do some a
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
+
+To run locally via GUI ( be sure to have application running on separate terminal)
+
+```
+npx open cypress
+```
+
+Or the headless report
+
+```
+npm run e2e:test
+```
+
+Which downloads the latest browserlist and runs e2e's on it.
 
 **Userful Chrome Extensions**
 (Cypress Recorder Chrome Extension)[https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab?hl=en-US]
@@ -89,6 +125,8 @@ _snap shots at/in the cypress e2e testing creates a screen comparison tool for r
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
+
+Percy works with BrowserStack account and can give emails on visually changes in application for visual regression review.
 
 #### [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) ( Running performance testing in the CI build via Github Actions )
 
