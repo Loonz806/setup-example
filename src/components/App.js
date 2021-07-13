@@ -6,9 +6,11 @@ const App = () => {
   return (
     <div>
       <header>
+        {/* messing up on purpose */}
         <h1>{testMessage}</h1>
       </header>
       <Suspense fallback={<div>Loading...</div>}>
+        {/* another mistake */}
         <main id="content">
           <Counter />
         </main>
