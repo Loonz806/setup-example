@@ -18,7 +18,7 @@ analytics.on("pageStart", function lol() {
 });
 
 ReactDOM.render(
-  <ErrorBoundary>
+  <ErrorBoundary fallback={"An error has occurred"}>
     <Suspense fallback={<div>Loading...</div>}>
       <App />
     </Suspense>
