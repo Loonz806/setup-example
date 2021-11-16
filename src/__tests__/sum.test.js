@@ -104,18 +104,19 @@ describe("testing with jest", () => {
   });
 
   describe("callbacks", () => {
+    const peanutButter = `peanut butter`;
     const fetchData = (callback) => {
-      const message = "peanut butter";
+      const message = peanutButter;
       setTimeout(() => {
         callback(message);
       }, 100);
     };
 
     // you have to add done to inform jest that callback is finished
-    test("the data is peanut butter", (done) => {
+    test(`the data is ${peanutButter}`, (done) => {
       function callback(data) {
         try {
-          expect(data).toBe("peanut butter");
+          expect(data).toBe(peanutButter);
           done();
         } catch (error) {
           done(error);
@@ -146,7 +147,7 @@ describe("testing with jest", () => {
 
     test("the data is peanut butter, then", () => {
       return fetchData().then((data) => {
-        expect(data).toBe("peanut butter");
+        expect(data).toBe(successMessage);
       });
     });
 
@@ -156,7 +157,7 @@ describe("testing with jest", () => {
     });
 
     test("the data is peanut butter, resolves", () => {
-      return expect(fetchData()).resolves.toBe("peanut butter");
+      return expect(fetchData()).resolves.toBe(successMessage);
     });
 
     test("the fetch fails with an error, rejects", () => {

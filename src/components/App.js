@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from "react";
+import StarWars from "./StarWars";
 const Counter = lazy(() => import("./Counter"));
 
 const App = () => {
@@ -13,6 +14,8 @@ const App = () => {
         {/* another mistake */}
         <main id="content">
           <Counter />
+          <hr />
+          <StarWars />
         </main>
       </Suspense>
     </div>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/lpeters3/Projects/module-federation/setup-example/src/__tests__/Counter.test.js">
+    <testCase name="&lt;Counter/&gt; should " duration="49"/>
+  </file>
+  <file path="/Users/lpeters3/Projects/module-federation/setup-example/src/__tests__/ErrorBoundary.test.js">
+    <testCase name="&lt;ErrorBoundry/&gt; shows the component when there is not an error" duration="35"/>
+    <testCase name="&lt;ErrorBoundry/&gt; Throws an error when a error happens" duration="24"/>
+    <testCase name="&lt;ErrorBoundry/&gt; throws warning if no fallback is given" duration="2"/>
+  </file>
+  <file path="/Users/lpeters3/Projects/module-federation/setup-example/src/__tests__/StarWars.test.js">
+    <testCase name="StarWars component check to see if renders" duration="115"/>
+  </file>
+  <file path="/Users/lpeters3/Projects/module-federation/setup-example/src/__tests__/app.test.js">
+    <testCase name="App Component show the title of the application" duration="129"/>
+  </file>
+  <file path="/Users/lpeters3/Projects/module-federation/setup-example/src/__tests__/Sum.test.js">
+    <testCase name="sum function should add two numbers together" duration="3"/>
+    <testCase name="testing with jest matchers object assignment" duration="1"/>
+    <testCase name="testing with jest matchers adding positive numbers is not zero" duration="10"/>
+    <testCase name="testing with jest truthiness null" duration="1"/>
+    <testCase name="testing with jest truthiness zero" duration="3"/>
+    <testCase name="testing with jest numbers two plus two" duration="1"/>
+    <testCase name="testing with jest numbers adding floating point numbers" duration="0"/>
+    <testCase name="testing with jest strings there is no I in team" duration="0"/>
+    <testCase name="testing with jest strings but there is a &quot;stop&quot; in Christoph" duration="0"/>
+    <testCase name="testing with jest arrays and iterables the shopping list has beer on it" duration="1"/>
+    <testCase name="testing with jest exceptions compiling android goes as expected" duration="5"/>
+    <testCase name="testing with jest callbacks the data is peanut butter" duration="102"/>
+    <testCase name="testing with jest promises/resolve/reject/catch/async/await the data is peanut butter, then" duration="103"/>
+    <testCase name="testing with jest promises/resolve/reject/catch/async/await the fetch fails with an error, catch" duration="104"/>
+    <testCase name="testing with jest promises/resolve/reject/catch/async/await the data is peanut butter, resolves" duration="101"/>
+    <testCase name="testing with jest promises/resolve/reject/catch/async/await the fetch fails with an error, rejects" duration="101"/>
+    <testCase name="testing with jest promises/resolve/reject/catch/async/await the data is peanut butter" duration="101"/>
+    <testCase name="testing with jest promises/resolve/reject/catch/async/await the fetch fails with an error" duration="102"/>
+    <testCase name="testing with jest promises/resolve/reject/catch/async/await the data is peanut butter" duration="104"/>
+    <testCase name="testing with jest promises/resolve/reject/catch/async/await the fetch fails with an error" duration="106"/>
+    <testCase name="testing with jest should check truth" duration="0"/>
+  </file>
+</testExecutions>

@@ -1,6 +1,7 @@
 import "cypress-axe";
 
 describe("the setup-example page", () => {
+  const beVisible = `be.visible`;
   // Now using Cypress/Testing-Library :)
   beforeEach(() => {
     // Load our app before starting each test case
@@ -17,9 +18,9 @@ describe("the setup-example page", () => {
   // Basic usage after interacting with the page
   it("loads the application", () => {
     cy.get("#root").should("exist");
-    cy.findByText(/^0$/).should("be.visible");
-    cy.findByText(/^\+$/).should("be.visible");
-    cy.findByText(/^-$/).should("be.visible");
+    cy.findByText(/^0$/).should(beVisible);
+    cy.findByText(/^\+$/).should(beVisible);
+    cy.findByText(/^-$/).should(beVisible);
     cy.percySnapshot("Page loaded");
     cy.checkA11y();
   });
