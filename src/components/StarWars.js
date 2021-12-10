@@ -8,12 +8,14 @@ const StarWars = () => {
     if (status === "fetching") {
       return <div>Loading...</div>;
     } else if (status === "fetched") {
-      return (
-        <ul>
-          <li>{data.name}</li>
-          <li>{data.gender}</li>
-        </ul>
-      );
+      if (data) {
+        return (
+          <ul>
+            <li>{data.name}</li>
+            <li>{data.gender}</li>
+          </ul>
+        );
+      }
     } else if (status === "error") {
       return <div>{error}</div>;
     }
