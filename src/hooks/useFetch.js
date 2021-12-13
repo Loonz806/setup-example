@@ -15,28 +15,28 @@ const useFetch = (url) => {
     }
     // using this rather than axios, its time, IE is dead
     const fetchData = async () => {
-      let data;
+      let d;
       setStatus("fetching");
       if (cache.current[`${url}`]) {
-        data = cache.current[`${url}`];
-        setData(data);
+        d = cache.current[`${url}`];
+        setData(d);
         setStatus("fetched");
       } else {
         try {
           const response = await fetch(url);
           if (response.status === 200) {
-            data = await response.json();
+            d = await response.json();
           } else {
             setStatus("error");
-            setError(`Error Occurred: `, response.status, data);
-            console.error("Error occurred:", response.status, data);
+            setError(`Error Occurred: `, response.status, d);
+            console.error("Error occurred:", response.status, d);
           }
         } catch (e) {
           setStatus("error");
           setError(`Error Occurred: `, e);
           console.error("Error occurred:", e);
         }
-        setData(data);
+        setData(d);
         setStatus("fetched");
       }
     };
