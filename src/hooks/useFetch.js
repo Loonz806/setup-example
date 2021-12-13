@@ -18,7 +18,7 @@ const useFetch = (url) => {
       let data;
       setStatus("fetching");
       if (cache.current[`${url}`]) {
-        const data = cache.current[`${url}`];
+        data = cache.current[`${url}`];
         setData(data);
         setStatus("fetched");
       } else {
@@ -31,10 +31,10 @@ const useFetch = (url) => {
             setError(`Error Occurred: `, response.status, data);
             console.error("Error occurred:", response.status, data);
           }
-        } catch (error) {
+        } catch (e) {
           setStatus("error");
-          setError(`Error Occurred: `, error);
-          console.error("Error occurred:", error);
+          setError(`Error Occurred: `, e);
+          console.error("Error occurred:", e);
         }
         setData(data);
         setStatus("fetched");
