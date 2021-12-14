@@ -1,18 +1,21 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 
-const StarWars = () => {
-  const { data, status, error } = useFetch("https://swapi.dev/api/people/1");
+const Pokemon = () => {
+  const { data, status, error } = useFetch(
+    "https://pokeapi.co/api/v2/pokemon/1"
+  );
 
   const renderView = () => {
     if (status === "fetching") {
       return <div>Loading...</div>;
     } else if (status === "fetched") {
+      console.log("DATA", data);
       if (data) {
         return (
           <ul>
             <li>{data.name}</li>
-            <li>{data.gender}</li>
+            <li>{data.height}</li>
           </ul>
         );
       }
@@ -23,10 +26,10 @@ const StarWars = () => {
 
   return (
     <div>
-      StarWars
+      Pokemon
       {renderView()}
     </div>
   );
 };
 
-export default StarWars;
+export default Pokemon;
