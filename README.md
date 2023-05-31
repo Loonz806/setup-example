@@ -3,9 +3,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ![Github Actions CI](https://github.com/Loonz806/setup-example/workflows/Github%20Actions%20CI/badge.svg)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/47e38cc6/Visual-Testing-Example)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/Loonz806/setup-example.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Loonz806/setup-example/alerts/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Loonz806_setup-example&metric=alert_status)](https://sonarcloud.io/dashboard?id=Loonz806_setup-example)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Loonz806/setup-example.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Loonz806/setup-example/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/Loonz806/setup-example/badge.svg)](https://snyk.io/test/github/Loonz806/setup-example)
 
 # Setup Example
