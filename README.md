@@ -12,7 +12,6 @@
 
 To install
 
-
 ```
 npm install
 ```
