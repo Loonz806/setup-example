@@ -21,7 +21,8 @@
     "cy:run": "percy exec -- npx cypress run",
     "e2e:test": "npx browserslist@latest --update-db && start-server-and-test start http://localhost:9000 cy:run",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
   },
   "author": "Lenny Peters <@loonz806>",
   "license": "MIT",
