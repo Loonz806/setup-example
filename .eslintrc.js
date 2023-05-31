@@ -12,6 +12,7 @@ module.exports = {
     "plugin:cypress/recommended",
     "plugin:security/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:storybook/recommended",
   ],
   parserOptions: {
     ecmaFeatures: {

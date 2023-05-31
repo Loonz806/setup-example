@@ -1,8 +1,10 @@
 import React, { lazy, Suspense } from "react";
-import ReactDOM from "react-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
-import "./styles/global.scss";
+import { createRoot } from "react-dom/client";
 import analytics from "./utils/analytics";
+import "./styles/global.scss";
+const container = document.querySelector("#root");
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
 const App = lazy(() => import("./components/App"));
 
 /* Attach listeners once */
@@ -17,11 +19,10 @@ analytics.on("pageStart", function lol() {
   console.log("Page Start");
 });
 
-ReactDOM.render(
+root.render(
   <ErrorBoundary fallback={"An error has occurred"}>
     <Suspense fallback={<div>Loading...</div>}>
       <App />
     </Suspense>
-  </ErrorBoundary>,
-  document.querySelector("#root")
+  </ErrorBoundary>
 );
