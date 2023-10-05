@@ -7,7 +7,7 @@ describe("the setup-example page", () => {
       "log",
       `${violations.length} accessibility violation${
         violations.length === 1 ? "" : "s"
-      } ${violations.length === 1 ? "was" : "were"} detected`
+      } ${violations.length === 1 ? "was" : "were"} detected`,
     );
     // pluck specific keys to keep the table readable
     const violationData = violations.map(
@@ -16,7 +16,7 @@ describe("the setup-example page", () => {
         impact,
         description,
         nodes: nodes.length,
-      })
+      }),
     );
 
     cy.task("table", violationData);
@@ -34,7 +34,7 @@ describe("the setup-example page", () => {
       {
         includedImpacts: ["critical"],
       },
-      terminalLog
+      terminalLog,
     );
   });
 
@@ -50,7 +50,7 @@ describe("the setup-example page", () => {
       {
         includedImpacts: ["critical"],
       },
-      terminalLog
+      terminalLog,
     );
   });
 

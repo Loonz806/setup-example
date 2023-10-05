@@ -12,7 +12,7 @@ describe("<ErrorBoundry/>", () => {
     const { getByText, unmount } = render(
       <ErrorBoundary fallback={fallback}>
         <Greeting />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
     getByText("Hello World");
     unmount();
@@ -29,7 +29,7 @@ describe("<ErrorBoundry/>", () => {
     const { unmount } = render(
       <ErrorBoundary fallback={fallback}>
         <Greeting />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
     expect(console.error).toHaveBeenCalled();
     unmount();
@@ -45,7 +45,7 @@ describe("<ErrorBoundry/>", () => {
     const { unmount } = render(
       <ErrorBoundary>
         <Greeting />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
     expect(console.warn).toHaveBeenCalled();
     unmount();

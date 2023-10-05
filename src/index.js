@@ -24,5 +24,5 @@ root.render(
     <Suspense fallback={<div>Loading...</div>}>
       <App />
     </Suspense>
-  </ErrorBoundary>
+  </ErrorBoundary>,
 );
