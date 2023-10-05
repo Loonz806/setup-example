@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     needs: [build]
     steps:
       - uses: actions/checkout@v3
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     needs: [build]
     steps:
       - uses: actions/checkout@v3
@@ -73,7 +73,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     needs: [build]
     steps:
       - uses: actions/checkout@v3
@@ -122,14 +122,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     needs: [build]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-      - run: npm install && npm install -g @lhci/cli@0.7.x
+          node-version: 18.x
+      - run: npm install && npm install -g @lhci/cli@0.12.x
       - run: npm run build
       - run: lhci autorun
         env:
@@ -138,7 +138,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     needs: [lint, test, e2e_visual_a11y, lighthouseci, sonarcloud]
     steps:
       - name: Checkout 🛎️
