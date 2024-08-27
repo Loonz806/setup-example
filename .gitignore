@@ -40,3 +40,4 @@ yarn-error.log*
 # IDE's
 .vscode
 .idea
+src/components
