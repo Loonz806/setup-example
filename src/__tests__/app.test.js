@@ -4,10 +4,9 @@ import App from "../components/App";
 
 describe("App Component", () => {
   test("show the title of the application", () => {
-    const { debug } = render(<App />);
+    render(<App />);
     expect(
       screen.getByRole("heading", { name: /Welcome to Setup Example/i }),
     ).toBeInTheDocument();
-    debug();
   });
 });

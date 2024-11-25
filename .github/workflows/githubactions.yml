@@ -12,7 +12,8 @@ jobs:
         node-version: [18.x]
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/cache@v3
+      - id: npm-cache
+        uses: actions/cache@v3
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
@@ -36,12 +37,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: actions/cache@v3
+      - id: npm-cache
+        uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install npm
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+        if: steps['npm-cache'].outputs.cache-hit != 'true'
         run: npm install
       - name: Run lint
         run: npm run lint
@@ -60,12 +62,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: actions/cache@v3
+      - id: npm-cache
+        uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install npm
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+        if: steps['npm-cache'].outputs.cache-hit != 'true'
         run: npm install
       - name: Run Coverage
         run: npm run coverage
@@ -82,7 +85,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: actions/cache@v3
+      - id: npm-cache
+        uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -96,7 +100,7 @@ jobs:
       - name: Run e2e
         run: npm run e2e:test
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN || '' }}
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
@@ -117,7 +121,7 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN || '' }}
   lighthouseci:
     runs-on: ubuntu-latest
     strategy:
@@ -133,7 +137,7 @@ jobs:
       - run: npm run build
       - run: lhci autorun
         env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN || '' }}
   deploy:
     runs-on: ubuntu-latest
     strategy:

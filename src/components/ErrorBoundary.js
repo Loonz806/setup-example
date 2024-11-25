@@ -19,7 +19,7 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    const message = `Unable to render: ${error} ${errorInfo}`;
+    const message = `Unable to render: ${JSON.stringify(error)} ${errorInfo}}`;
     console.error(message);
   }
 
