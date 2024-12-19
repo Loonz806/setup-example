@@ -9,7 +9,6 @@ module.exports = {
     "plugin:react/recommended",
     "standard",
     "plugin:prettier/recommended",
-    "plugin:cypress/recommended",
     "plugin:security/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:storybook/recommended",

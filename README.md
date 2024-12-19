@@ -71,7 +71,7 @@ _or even **npm run coverage** which outputs a report of the unit coverage_
 
 or automatically if a husky git hook is enabled via `.huskyrc` file, if testing is bypassed with `--no-verify` it is caught in the CI/CD checks in Github Actions upstream
 
-**Useful Chrome Extension** - https://chrome.google.com/webstore/detail/testing-library-which-que/olmmagdolfehlpjmbkmondggbebeimoh?hl=en-US
+**Useful Chrome Extension** - <https://chrome.google.com/webstore/detail/testing-library-which-que/olmmagdolfehlpjmbkmondggbebeimoh?hl=en-US>
 
 #### [Commitlint](https://commitlint.js.org/#/) ( Commit messages that connect to JIRA tickets )
 
@@ -93,9 +93,9 @@ Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline 
 
 [Github Actions](https://github.com/Loonz806/setup-example/actions)
 
-#### [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) ( Running against a local build before deploying but can be modified )
+#### [Playwright](https://playwright.dev/) ( Running against a local build before deploying but can be modified )
 
-_runs e2e testing against browsers such as Chrome, Edge and Firefox to do some actual dom assertions covering lions share of browsers_
+_runs e2e testing against browsers such as Chrome, Edge, Safari and Firefox to do some actual dom assertions covering lions share of browsers_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
@@ -103,7 +103,7 @@ Runs as a dependency in CI as well for deployment but can be modified via the Gi
 To run locally via GUI ( be sure to have application running on separate terminal)
 
 ```
-npx open cypress
+npx playwright test
 ```
 
 Or the headless report
@@ -115,11 +115,12 @@ npm run e2e:test
 Which downloads the latest browserlist and runs e2e's on it.
 
 **Userful Chrome Extensions**
-(Cypress Recorder Chrome Extension)[https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab?hl=en-US]
 
 #### [Percy](https://percy.io) ( Running visual regression testing in the e2e test suite in which needs approval from QA to be passing )
 
-_snap shots at/in the cypress e2e testing creates a screen comparison tool for regression for visuals that is automated and can scale against browsers such as Chrome, Edge and Firefox_
+TODO: addressing Percy for Playwright
+
+_snap shots at/in the playwright e2e testing creates a screen comparison tool for regression for visuals that is automated and can scale against browsers such as Chrome, Edge and Firefox_
 
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
@@ -133,16 +134,16 @@ _regresses individual builds against the preset for non:pwa application standard
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
 
-#### [axe-core](https://github.com/dequelabs/axe-core) + [cypress-axe](https://www.npmjs.com/package/cypress-axe)
+#### [@axe-core/playwright](https://www.npmjs.com/package/@axe-core/playwright)
 
 _regress individual builds against the a11y recommended axe-core library for introductions of malformed html, mislabeled aria-roles_
 
-Code is folded into the cypress e2e testing suite.
+Code is folded into the Playwright e2e testing suite.
 Similar to other tools like TravisCI, CircleCI, GitLab, Bitbucket, Codepipeline etc. Configuration found in `.github/workflows`
 Runs as a dependency in CI as well for deployment but can be modified via the Github Action
 
 **Useful Chrome Extensions**
-(axe DevTools - Web Accessibility Testing)[https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US]
+[axe DevTools - Web Accessibility Testing](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US)
 
 #### [Storybook](https://storybook.js.org/)
 
